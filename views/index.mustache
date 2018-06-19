@@ -1,0 +1,28 @@
+<html>
+
+    <head>
+
+    </head>
+
+    <body>
+        <h2>Welcome to Snackify</h2>
+        <h4>Add new list</h4>
+        <form action="/" method="post">
+        <input type="text" name="title" placeholder="New Store">
+        <input type="submit" value="add"/>
+        </form>
+
+        {{#lists}}
+        <form action="/delete" method"post">
+        <h2>{{name}}</h2>
+        <input type="hidden" name="listId" value='{{listId}}' />
+        <input type="submit" value="Delete"/>
+        <ul>
+            <li>{{productName}}</li>
+        </ul>
+        </form>
+        {{/lists}}
+
+    </body>
+
+</html>
